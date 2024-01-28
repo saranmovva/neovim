@@ -4,7 +4,7 @@ local lspconfig = require('lspconfig')
 
 lsp.preset("recommended")
 
-lspconfig.clangd.setup {}	
+lspconfig.clangd.setup {}
 lspconfig.csharp_ls.setup {}
 lspconfig.cssls.setup {}
 lspconfig.dockerls.setup {}
@@ -27,4 +27,3 @@ lspconfig.vuels.setup {}
 lspconfig.yamlls.setup {}
 
 lsp.setup()
-
