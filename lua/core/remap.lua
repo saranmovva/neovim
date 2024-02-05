@@ -35,3 +35,9 @@ cmp.setup({
 		['<C-d>'] = cmp.mapping.scroll_docs(4)
 	})
 })
+
+-- Barbar Remaps
+vim.api.nvim_set_keymap('n', '<A-Left>', '<Cmd>BufferPrevious<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<A-Right>', '<Cmd>BufferNext<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<A-c>', '<Cmd>BufferClose<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<A-p>', '<Cmd>BufferPin<CR>', { noremap = true, silent = true })
