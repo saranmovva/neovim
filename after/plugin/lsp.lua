@@ -4,6 +4,13 @@ local lspconfig = require('lspconfig')
 
 lsp.preset("recommended")
 
+lsp.on_attach(function (client, bufnr)
+	lsp.default_keymaps({
+		buffer = bufnr,
+		preserve_mappings = false
+	})
+end)
+
 lspconfig.clangd.setup {}
 lspconfig.csharp_ls.setup {}
 lspconfig.cssls.setup {}

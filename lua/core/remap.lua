@@ -15,26 +15,10 @@ vim.api.nvim_set_keymap(
 	{ noremap = true }
 )
 
-local cmp = require('cmp')
-local cmp_action = require('lsp-zero').cmp_action()
+-- Lsp Remaps
+vim.api.nvim_set_keymap('n', '<F12>', ':lua vim.lsp.buf.definition() <CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<F11>', ':lua vim.lsp.buf.references() <CR>', { noremap = true })
 
-cmp.setup({
-	mapping = cmp.mapping.preset.insert({
-		-- `Enter` key to confirm completion
-		['<C-Enter>'] = cmp.mapping.confirm({ select = false }),
-
-		-- Ctrl+Space to trigger completion menu
-		['<C-Space>'] = cmp.mapping.complete(),
-
-		-- Navigate between snippet placeholder
-		['<C-f>'] = cmp_action.luasnip_jump_forward(),
-		['<C-b>'] = cmp_action.luasnip_jump_backward(),
-
-		-- Scroll up and down in the completion documentation
-		['<C-u>'] = cmp.mapping.scroll_docs(-4),
-		['<C-d>'] = cmp.mapping.scroll_docs(4)
-	})
-})
 
 -- Barbar Remaps
 vim.api.nvim_set_keymap('n', '<A-Left>', '<Cmd>BufferPrevious<CR>', { noremap = true, silent = true })
