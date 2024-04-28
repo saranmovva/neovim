@@ -1,5 +1,6 @@
 require("mason").setup()
 require("mason-lspconfig").setup {
+	--[=[
 	ensure_installed = {
 		-- LSPs
 		"clangd",
@@ -11,9 +12,11 @@ require("mason-lspconfig").setup {
 		"tsserver",
 		"lua_ls",
 	}
+	--]=]
 }
 
 require('mason-null-ls').setup {
+	--[=[
 	ensure_installed = {
 		"clang-format",
 		"csharpier",
@@ -22,4 +25,5 @@ require('mason-null-ls').setup {
 		"prettierd",
 		"rustywind",
 	}
+	--]=]
 }

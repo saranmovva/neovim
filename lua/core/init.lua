@@ -15,6 +15,9 @@ require("core.lazy")
 require("core.remap")
 
 vim.cmd(":Neotree")
+--[=[ vim.api.nvim_create_autocmd({"BufRead"}, {
+	command = "AerialToggle"
+}) --]=]
 
 vim.wo.number = true
 vim.o.tabstop = 4

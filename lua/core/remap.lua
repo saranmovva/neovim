@@ -25,3 +25,6 @@ vim.api.nvim_set_keymap('n', '<A-Left>', '<Cmd>BufferPrevious<CR>', { noremap = 
 vim.api.nvim_set_keymap('n', '<A-Right>', '<Cmd>BufferNext<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<A-c>', '<Cmd>BufferClose<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<A-p>', '<Cmd>BufferPin<CR>', { noremap = true, silent = true })
+
+-- Aerial Remap
+vim.keymap.set("n", "<leader>a", "<cmd>AerialToggle!<CR>")

@@ -34,6 +34,8 @@ require('lualine').setup {
 		theme = pitchBlack,
 		component_separators = '|',
 		section_separators = { left = '', right = '' },
-	}
+	},
+
+	section = { lualine_x = {"aerial"} }
 
 }
