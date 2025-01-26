@@ -1,8 +1,7 @@
 require("lazy").setup {
 
 	{
-		'nvim-telescope/telescope.nvim', version = '0.1.5',
-		-- or                            , branch = '0.1.x',
+		'nvim-telescope/telescope.nvim',
 		dependencies = { { 'nvim-lua/plenary.nvim' } }
 	},
 
@@ -10,13 +9,13 @@ require("lazy").setup {
 
 	{ 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
 
-	'nvim-treesitter/playground',
+	{ 'nvim-treesitter/playground' },
 
-	'mbbill/undotree',
+	{ 'mbbill/undotree' },
 
-	"nvim-lua/plenary.nvim",
+	{ "nvim-lua/plenary.nvim" },
 
-	'nvim-tree/nvim-web-devicons',
+	{ 'nvim-tree/nvim-web-devicons' },
 
 	{
 		"nvim-neo-tree/neo-tree.nvim",
@@ -29,6 +28,7 @@ require("lazy").setup {
 		}
 	},
 
+	-- LSP
 	{
 		"williamboman/mason.nvim",
 		"williamboman/mason-lspconfig.nvim",
@@ -36,21 +36,17 @@ require("lazy").setup {
 	},
 
 	{
-		'VonHeikemen/lsp-zero.nvim',
-		branch = 'v3.x',
-		dependencies = {
-			--- Uncomment the two plugins below if you want to manage the language servers from neovim
-			-- {'williamboman/mason.nvim'},
-			-- {'williamboman/mason-lspconfig.nvim'},
-
-			-- LSP Support
-			{ 'neovim/nvim-lspconfig' },
-			-- Autocompletion
-			{ 'hrsh7th/nvim-cmp' },
-			{ 'hrsh7th/cmp-nvim-lsp' },
-			{ 'L3MON4D3/LuaSnip' },
-		}
-	},
+    'hrsh7th/nvim-cmp',
+		'hrsh7th/cmp-nvim-lsp'
+  },
+  --[[
+	{
+		lazy = false,
+		{ 'ms-jpq/coq_nvim', branch = 'coq' },
+		{ 'ms-jpq/coq.artifacts', branch = 'artifacts' },
+		{ 'ms-jpq/coq.thirdparty', branch = '3p' }
+  },
+	]]--
 
 	{ 'lewis6991/gitsigns.nvim' },
 
@@ -89,5 +85,11 @@ require("lazy").setup {
 			"nvim-treesitter/nvim-treesitter",
 			"nvim-tree/nvim-web-devicons"
 		}
+	},
+
+  {
+		"xiyaowong/transparent.nvim"
 	}
+
+
 }

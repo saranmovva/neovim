@@ -9,6 +9,7 @@ if not vim.loop.fs_stat(lazypath) then
 		lazypath,
 	})
 end
+
 vim.opt.rtp:prepend(lazypath)
 
 require("core.lazy")
@@ -20,5 +21,5 @@ vim.cmd(":Neotree")
 }) --]=]
 
 vim.wo.number = true
-vim.o.tabstop = 4
+vim.o.tabstop = 2
 vim.o.shiftwidth = 4

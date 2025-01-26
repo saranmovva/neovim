@@ -1,10 +1,12 @@
 local cmp = require('cmp')
-local cmp_action = require('lsp-zero').cmp_action()
 
 cmp.setup({
 	window = {
 		documentation = cmp.config.window.bordered(),
 	},
+	sources = {
+    { name = 'nvim_lsp' }
+  },
 	mapping = cmp.mapping.preset.insert({
 		-- `Enter` key to confirm completion
 		['<Tab>'] = cmp.mapping.confirm({ select = false }),
