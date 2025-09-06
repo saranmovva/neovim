@@ -28,3 +28,6 @@ vim.api.nvim_set_keymap('n', '<A-p>', '<Cmd>BufferPin<CR>', { noremap = true, si
 
 -- Aerial Remap
 vim.keymap.set("n", "<leader>a", "<cmd>AerialToggle!<CR>")
+
+-- Trouble
+vim.keymap.set("n", "<leader>t", "<cmd>Trouble diagnostics toggle<cr>")

@@ -1,3 +1,11 @@
+
+vim.o.tabstop = 2
+vim.o.shiftwidth = 4
+vim.opt.number = true
+vim.opt.relativenumber = true
+vim.opt.numberwidth = 4
+vim.opt.signcolumn = "auto:2"
+
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
 	vim.fn.system({
@@ -19,7 +27,3 @@ vim.cmd(":Neotree")
 --[=[ vim.api.nvim_create_autocmd({"BufRead"}, {
 	command = "AerialToggle"
 }) --]=]
-
-vim.wo.number = true
-vim.o.tabstop = 2
-vim.o.shiftwidth = 4

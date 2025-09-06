@@ -16,7 +16,16 @@ local lsp_capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 lspconfig.cssls.setup { capabilities = lsp_capabilities }
 lspconfig.csharp_ls.setup { capabilities = lsp_capabilities }
-lspconfig.lua_ls.setup { capabilities = lsp_capabilities }
+lspconfig.lua_ls.setup { 
+		capabilities = lsp_capabilities, 
+		settings = {
+				Lua = {
+						diagnostics = {
+								globals = { 'vim', 'use', 'lazy' },
+						},
+				},
+		},
+}
 lspconfig.ts_ls.setup { capabilities = lsp_capabilities }
 lspconfig.tailwindcss.setup { capabilities = lsp_capabilities }
 
