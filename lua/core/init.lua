@@ -6,6 +6,13 @@ vim.opt.relativenumber = true
 vim.opt.numberwidth = 4
 vim.opt.signcolumn = "auto:2"
 
+vim.diagnostic.config({
+  float = {
+			source = "always",
+			border = border
+  }
+})
+
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
 	vim.fn.system({
@@ -20,10 +27,17 @@ end
 
 vim.opt.rtp:prepend(lazypath)
 
+vim.o.foldmethod = "expr"
+vim.o.foldexpr = "v:lua.vim.lsp.foldexpr()"
+
+vim.o.foldlevel = 99
+vim.o.foldlevelstart = 99
+
+-- Enable folding
+vim.o.foldenable = true
+
+-- Customize fold text display (optional)
+vim.o.foldtext = ""
+
 require("core.lazy")
 require("core.remap")
-
-vim.cmd(":Neotree")
---[=[ vim.api.nvim_create_autocmd({"BufRead"}, {
-	command = "AerialToggle"
-}) --]=]

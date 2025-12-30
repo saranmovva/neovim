@@ -129,8 +129,7 @@ require("lazy").setup {
 	{
 		"greggh/claude-code.nvim",
 		dependencies = {
-				"nvim-lua/plenary.nvim", -- Required for git operations
+			"nvim-lua/plenary.nvim", -- Required for git operations
 		}
-  },
-
+	},
 }

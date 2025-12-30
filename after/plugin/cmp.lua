@@ -8,6 +8,10 @@ cmp.setup({
     { name = 'nvim_lsp' }
   },
 	mapping = cmp.mapping.preset.insert({
+		-- Navigate through completion items
+		['<C-j>'] = cmp.mapping.select_next_item(),
+		['<C-k>'] = cmp.mapping.select_prev_item(),
+
 		-- `Enter` key to confirm completion
 		['<Tab>'] = cmp.mapping.confirm({ select = false }),
 
@@ -15,7 +19,7 @@ cmp.setup({
 		['<C-Space>'] = cmp.mapping.complete(),
 
 		-- Scroll up and down in the completion documentation
-		['<C-Up>'] = cmp.mapping.scroll_docs(-4),
-		['<C-Down>'] = cmp.mapping.scroll_docs(4)
+		['<C-b>'] = cmp.mapping.scroll_docs(-4),
+		['<C-f>'] = cmp.mapping.scroll_docs(4)
 	})
 })

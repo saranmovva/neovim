@@ -7,7 +7,8 @@ require("mason-lspconfig").setup {
 		"csharp_ls",
 		"lua_ls",
 		"tailwindcss",
-		"ts_ls"
+		"ts_ls",
+		"gopls"
 	}
 }
 
@@ -28,7 +29,7 @@ lspconfig.lua_ls.setup {
 }
 lspconfig.ts_ls.setup { capabilities = lsp_capabilities }
 lspconfig.tailwindcss.setup { capabilities = lsp_capabilities }
-
+lspconfig.gopls.setup { capabilities = lsp_capabilities }
 --[[
 require('mason-null-ls').setup {
 	ensure_installed = {
