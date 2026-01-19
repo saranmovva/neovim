@@ -16,7 +16,8 @@ vim.api.nvim_set_keymap(
 )
 
 -- Telescope
-vim.api.nvim_set_keymap('n', '<leader>f', '<Cmd>Telescope<CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<leader>ff', '<Cmd>Telescope<CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<leader>f', '<Cmd>Telescope find_files<CR>', { noremap = true})
 
 -- Lsp Remaps
 vim.api.nvim_set_keymap('n', '<F12>', ':lua vim.lsp.buf.definition() <CR>', { noremap = true })

@@ -132,4 +132,11 @@ require("lazy").setup {
 			"nvim-lua/plenary.nvim", -- Required for git operations
 		}
 	},
+
+	{
+		"folke/tokyonight.nvim",
+		lazy = false,
+		priority = 1000,
+		opts = {},
+	}
 }

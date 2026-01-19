@@ -1,3 +1,4 @@
+--[[
 require("transparent").setup({
  groups = {
     'Normal', 'NormalNC', 'Comment', 'Constant', 'Special', 'Identifier',
@@ -15,3 +16,4 @@ require("transparent").setup({
   on_clear = function() end,
 
 })
+]]--

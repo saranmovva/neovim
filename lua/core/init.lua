@@ -1,4 +1,3 @@
-
 vim.o.tabstop = 2
 vim.o.shiftwidth = 4
 vim.opt.number = true
@@ -41,3 +40,5 @@ vim.o.foldtext = ""
 
 require("core.lazy")
 require("core.remap")
+
+vim.cmd[[colorscheme tokyonight-night]]
